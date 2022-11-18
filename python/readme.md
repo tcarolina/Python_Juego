@@ -2,26 +2,40 @@
 Snake - Game 
 
 main.py 
-from turtle import Screen  #importa la libreria turtle
-from snake import Snake #importa la clase serpiente
-from food import Food #importación Alimento
-from scoreboard import Scoreboard  #importar el marcador
-import time #libreria de tiempo 
+from turtle import Screen  __importa la libreria turtle__
 
-screen = Screen() #poner pantalla
-screen.setup(width=600, height=600) #pantalla.configuración(ancho=600, alto=600)
-screen.bgcolor("black") #pantalla.bgcolor("negro")
-screen.title("My Snake Game")#titulo ("Mi juego de la serpiente")
-screen.tracer(0) #pantalla.trazador(0)
+from snake import Snake __importa la clase serpiente__
 
+from food import Food __importación Alimento__
+
+from scoreboard import Scoreboard  __importar el marcador__
+
+import time __libreria de tiempo__ 
+
+# Configuracion de la pantalla
+screen = Screen() __poner pantalla__
+
+screen.setup(width=600, height=600) __pantalla.configuración(ancho=600, alto=600)__
+
+screen.bgcolor("black") __pantalla.bgcolor("negro")__
+
+screen.title("My Snake Game") __titulo ("Mi juego de la serpiente")__
+
+screen.tracer(0) __pantalla.trazador(0)__
+
+# configuracion de la serpiente 
 snake = Snake() #serpiente = serpiente()
 food = Food() #comida = comida()
 scoreboard = Scoreboard() #marcador = marcador()
 
+# Comandos dar ordenes a la serpiente 
 screen.listen() #pantalla.escuchar()
 screen.onkey(snake.up, "Up") #pantalla.en la tecla(serpiente.arriba, "Arriba")
+
 screen.onkey(snake.down, "Down") #pantalla.en la tecla (serpiente.abajo, "Abajo")
+
 screen.onkey(snake.left, "Left") #pantalla.en la tecla (serpiente.izquierda, "Izquierda")
+
 screen.onkey(snake.right, "Right") #pantalla.en la tecla (serpiente.derecha, "Derecha")
 
 # si el juego esta encendido ejecutara en pantalla: 
